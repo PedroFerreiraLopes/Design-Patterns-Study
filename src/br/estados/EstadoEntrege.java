@@ -2,7 +2,7 @@ package br.estados;
 
 public class EstadoEntrege implements IEstado {
     @Override
-    public void ProximoEstado(Entrega entrega) {
+    public void ProximoEstado(Entrega2 entrega) {
         System.out.println("Produto entregue ao destino final!");
     }
 
