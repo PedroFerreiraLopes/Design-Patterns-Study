@@ -19,10 +19,8 @@ public class Pedido {
 
     public void infoPedido() {
         System.out.println("Código do pedido: " + codigoPedido);
-        System.out.println("Endereço do remetente: " + enderecoRemetente);
-        System.out.println("Endereço do destinatário: " + enderecoDestinatario);
-        System.out.println("Remetente: " + remetente);
-        System.out.println("Destinatário: " + destinatario);
+        System.out.println("Remetente: " + remetente + " - Endereço: " + enderecoRemetente );
+        System.out.println("Destinatário: " + destinatario + " - Endereço: " + enderecoDestinatario);
         System.out.println("Valor do frete: " + estrategiaEntrega.calcularFrete());
     }
     
