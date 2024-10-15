@@ -1,8 +1,11 @@
 package br.estados;
 
+import br.entrega.Entrega;
+import br.observadores.IPublicador;
+
 public class EstadoAtraso implements IEstado {
     @Override
-    public void ProximoEstado(Entrega2 entrega) {
+    public void ProximoEstado(Entrega entrega) {
         entrega.setEstado(new EstadoEntrege());
     }
 

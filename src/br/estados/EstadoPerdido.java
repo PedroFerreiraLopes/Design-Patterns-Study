@@ -1,8 +1,10 @@
 package br.estados;
 
+import br.entrega.Entrega;
+
 public class EstadoPerdido implements IEstado{
     @Override
-    public void ProximoEstado(Entrega2 entrega) {
+    public void ProximoEstado(Entrega entrega) {
         System.out.println("Falha na entrega!!!");
     }
 
