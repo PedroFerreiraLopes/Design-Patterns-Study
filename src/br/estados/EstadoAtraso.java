@@ -1,7 +1,6 @@
 package br.estados;
 
 import br.entrega.Entrega;
-import br.observadores.IPublicador;
 
 public class EstadoAtraso implements IEstado {
     @Override
