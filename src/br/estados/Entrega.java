@@ -26,7 +26,7 @@ public class Entrega {
 
     private void notificarObservadores() {
         for (IObservador observador : observadores) {
-            observador.atualizar(estado.toString()); // TALVEZ !?
+            observador.atualizar(estado); // TALVEZ !?
         }
     }
 
