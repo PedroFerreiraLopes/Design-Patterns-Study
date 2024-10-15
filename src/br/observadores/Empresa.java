@@ -1,8 +1,8 @@
-package br.observadores;
+package src.br.observadores;
 
-import br.estados.EstadoAtraso;
-import br.estados.EstadoPerdido;
-import br.estados.IEstado;
+import src.br.estados.EstadoAtraso;
+import src.br.estados.EstadoPerdido;
+import src.br.estados.IEstado;
 
 public class Empresa implements IObservador{
     private String nome = "Generic Logistics";

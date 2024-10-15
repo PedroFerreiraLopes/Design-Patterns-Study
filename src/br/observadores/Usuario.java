@@ -1,6 +1,6 @@
-package br.observadores;
+package src.br.observadores;
 
-import br.estados.IEstado;
+import src.br.estados.IEstado;
 
 public class Usuario implements IObservador{
     private String nickname;

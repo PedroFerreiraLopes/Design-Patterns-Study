@@ -1,12 +1,13 @@
-package br.entrega;
+package src.br.entrega;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.estados.EstadoValidacao;
-import br.estados.IEstado;
-import br.observadores.IObservador;
-import br.observadores.IPublicador;
+import src.br.estados.EstadoValidacao;
+import src.br.estados.IEstado;
+import src.br.observadores.IObservador;
+import src.br.observadores.IPublicador;
+import src.br.veiculos.IVeiculos;
 
 public class Entrega implements IPublicador{
     private String codEntrega;

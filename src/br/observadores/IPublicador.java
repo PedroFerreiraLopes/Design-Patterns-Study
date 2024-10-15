@@ -1,4 +1,4 @@
-package br.observadores;
+package src.br.observadores;
 
 public interface IPublicador {
     public void adicionarObservador(IObservador observador);

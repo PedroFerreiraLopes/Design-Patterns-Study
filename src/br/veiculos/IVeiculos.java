@@ -1,4 +1,4 @@
-package br.veiculos;
+package src.br.veiculos;
 
 public interface IVeiculos {
     //tipo veiculo

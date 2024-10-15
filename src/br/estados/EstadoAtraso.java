@@ -1,6 +1,6 @@
-package br.estados;
+package src.br.estados;
 
-import br.entrega.Entrega;
+import src.br.entrega.Entrega;
 
 public class EstadoAtraso implements IEstado {
     @Override

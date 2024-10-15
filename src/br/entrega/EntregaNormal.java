@@ -1,4 +1,4 @@
-package br.entrega;
+package src.br.entrega;
 
 public class EntregaNormal implements EstrategiaEntrega {
     @Override

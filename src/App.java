@@ -1,13 +1,14 @@
+package src;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import br.entrega.Entrega;
-import br.entrega.EntregaNormal;
-import br.entrega.EstrategiaEntrega;
-import br.entrega.Pedido;
-import br.entrega.Rota;
-import br.veiculos.IVeiculos;
-import br.veiculos.Van;
+import src.br.entrega.Entrega;
+import src.br.entrega.EntregaNormal;
+import src.br.entrega.Pedido;
+import src.br.entrega.Rota;
+import src.br.veiculos.IVeiculos;
+import src.br.veiculos.Van;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -24,7 +25,7 @@ public class App {
         List<Rota> rotas = new ArrayList<>();
         
         // Adição de uma nova rota
-        String[] paradas = {"São Paulo-SP", "Campinas-SP", "Ribeirão Preto-SP"};
+        String[] paradas = {"São Paulo-SP", "Santo André-SP", "Mauá-SP"};
         Rota rota1 = new Rota(paradas, 300.0, 4.5);
         rotas.add(rota1);
         
