@@ -1,6 +1,6 @@
-package src.br.observadores;
+package br.observadores;
 
-import src.br.estados.IEstado;
+import br.estados.IEstado;
 
 public interface IObservador {
     public void atualizar(IEstado estado);

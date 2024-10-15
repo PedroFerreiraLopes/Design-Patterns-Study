@@ -1,6 +1,8 @@
-package src.br.observadores;
+package br.observadores;
 
-import src.br.estados.IEstado;
+import br.entrega.EstrategiaEntrega;
+import br.entrega.Pedido;
+import br.estados.IEstado;
 
 public class Usuario implements IObservador{
     private String nickname;
@@ -13,5 +15,10 @@ public class Usuario implements IObservador{
     public void atualizar(IEstado estado) {
         System.out.println("O usuário " + nickname + "foi notificado!");
         System.out.println("Sua entrega está " + estado.toString());
+    }
+    
+    public Pedido criarPedido(String codigoPedido, EstrategiaEntrega estrategiaEntrega, String enderecoRemetente,
+                              String enderecoDestinatario, String remetente, String destinatario, double peso) {
+        return new Pedido(codigoPedido, estrategiaEntrega, enderecoRemetente, enderecoDestinatario, remetente, destinatario, peso, this);
     }
 }

@@ -1,4 +1,4 @@
-package src.br.veiculos;
+package br.veiculos;
 
 public class Veiculos {
     private IVeiculos veiculo;

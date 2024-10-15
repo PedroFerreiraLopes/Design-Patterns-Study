@@ -1,4 +1,4 @@
-package src.br.entrega;
+package br.entrega;
 
 public interface EstrategiaEntrega{
     double calcularFrete();

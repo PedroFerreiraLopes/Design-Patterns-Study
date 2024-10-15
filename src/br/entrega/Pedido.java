@@ -1,4 +1,6 @@
-package src.br.entrega;
+package br.entrega;
+
+import br.observadores.Usuario;
 
 public class Pedido {
     private String codigoPedido;
@@ -9,7 +11,7 @@ public class Pedido {
     private String destinatario;
     private double peso;
 
-    public Pedido(String codigoPedido, EstrategiaEntrega estrategiaEntrega, String enderecoRemetente, String enderecoDestinatario, String remetente, String destinatario, double peso) {
+    public Pedido(String codigoPedido, EstrategiaEntrega estrategiaEntrega, String enderecoRemetente, String enderecoDestinatario, String remetente, String destinatario, double peso, Usuario usuario) {
         this.codigoPedido = codigoPedido;
         this.estrategiaEntrega = estrategiaEntrega;
         this.enderecoRemetente = enderecoRemetente;

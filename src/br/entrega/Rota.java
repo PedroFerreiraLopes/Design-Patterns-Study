@@ -1,4 +1,4 @@
-package src.br.entrega;
+package br.entrega;
 
 public class Rota {
     //lista de paradas da entrega no estilo Cidade-UF
