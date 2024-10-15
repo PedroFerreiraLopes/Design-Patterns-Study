@@ -12,4 +12,16 @@ public class Rota {
         this.tempo = tempo;
     }
 
+	public String[] getParadas() {
+		return paradas;
+	}
+
+	public double getDistancia() {
+		return distancia;
+	}
+
+	public double getTempo() {
+		return tempo;
+	}
+
 }
