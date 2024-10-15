@@ -1,8 +1,10 @@
 package br.estados;
 
+import br.entrega.Entrega;
+
 public class EstadoEmRota implements IEstado {
     @Override
-    public void ProximoEstado(Entrega2 entrega) {
+    public void ProximoEstado(Entrega entrega) {
         entrega.setEstado(new EstadoEntrege());
     }
 
