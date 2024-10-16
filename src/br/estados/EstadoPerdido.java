@@ -12,4 +12,9 @@ public class EstadoPerdido implements IEstado{
     public void Aviso(String mensagem) {
         System.out.println("FALHA NA ENTREGA!!!");
     }
+
+    @Override
+    public String toString() {
+        return "Perdido";
+    }
 }

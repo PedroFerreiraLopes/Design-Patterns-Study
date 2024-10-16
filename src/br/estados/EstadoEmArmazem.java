@@ -10,6 +10,11 @@ public class EstadoEmArmazem implements IEstado {
 
     @Override
     public void Aviso(String mensagem) {
-        System.out.println("Produtos em Armazem. Aguardando envio");
+        System.out.println("Produtos em Armazém. Aguardando envio");
+    }
+    
+    @Override
+    public String toString() {
+        return "Guardado em armazém";
     }
 }
