@@ -13,8 +13,8 @@ public class EstadoAtraso implements IEstado {
         System.out.println("Produtos com atraso. Desculpe o incômodo");
     }
 
-    @Override
-    public String toString() {
-        return "Atrasado";
-    }
+	@Override
+	public String NomeEstado() {
+		return "Atrasada";
+	}
 }

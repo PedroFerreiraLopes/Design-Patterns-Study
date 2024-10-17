@@ -17,4 +17,9 @@ public class EstadoEmArmazem implements IEstado {
     public String toString() {
         return "Guardado em armazém";
     }
+
+	@Override
+	public String NomeEstado() {
+		return "Em Armazém";
+	}
 }

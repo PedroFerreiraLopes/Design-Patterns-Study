@@ -1,8 +1,13 @@
 package br.entrega;
 
-public class EntregaRapida implements EstrategiaEntrega {
+public class EntregaRapida implements IEstrategiaEntrega {
     @Override
-    public double calcularFrete() {
-        return 10.0;
-    }    
+    public double calcularFrete(double peso) {
+        return 10.0 * peso;
+    }
+
+	@Override
+	public String tipoEntrega() {
+		return "Entrega Rápida";
+	}    
 }

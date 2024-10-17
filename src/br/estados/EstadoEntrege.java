@@ -13,8 +13,8 @@ public class EstadoEntrege implements IEstado {
         System.out.println("Produto entregue ao destino final!");
     }
     
-    @Override
-    public String toString() {
-        return "Entregue";
-    }
+	@Override
+	public String NomeEstado() {
+		return "Entregue";
+	}
 }
