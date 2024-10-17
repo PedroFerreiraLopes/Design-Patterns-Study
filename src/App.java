@@ -2,10 +2,14 @@ import br.entrega.Entrega;
 import br.entrega.EntregaNormal;
 import br.entrega.EntregaRapida;
 import br.entrega.Pedido;
+import br.entrega.Rota;
 import br.estados.EstadoAtraso;
 import br.estados.EstadoEmArmazem;
 import br.observadores.Empresa;
 import br.observadores.Usuario;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -38,6 +42,12 @@ public class App {
 
 		Entrega entrega2 = new Entrega("2", new EntregaRapida(), pedido2);
 		entrega2.mostrarInfoEntrega(pedido2);
+		
+		//Rotas
+        String[] paradas = {"São Paulo-SP", "Campinas-SP", "Ribeirão Preto-SP"};
+        Rota rota1 = new Rota(paradas, 300.0, 4.5);
+        
+		entrega2.adicionarRota(rota1);
 		entrega2.mostrarRotas();
 
     	System.out.println("--------------------------------------------------------");
