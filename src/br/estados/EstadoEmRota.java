@@ -12,4 +12,9 @@ public class EstadoEmRota implements IEstado {
     public void Aviso(String mensagem) {
         System.out.println("Produto em trânsito!");
     }
+
+	@Override
+	public String NomeEstado() {
+		return "Em Rota";
+	}
 }

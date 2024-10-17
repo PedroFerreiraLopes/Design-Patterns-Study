@@ -12,4 +12,9 @@ public class EstadoEntrege implements IEstado {
     public void Aviso(String mensagem) {
         System.out.println("Produto entregue ao destino final!");
     }
+    
+	@Override
+	public String NomeEstado() {
+		return "Entregue";
+	}
 }

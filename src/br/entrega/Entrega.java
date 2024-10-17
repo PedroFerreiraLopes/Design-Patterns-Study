@@ -1,31 +1,31 @@
 package br.entrega;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import br.estados.EstadoValidacao;
 import br.estados.IEstado;
 import br.observadores.IObservador;
 import br.observadores.IPublicador;
+import br.veiculos.Caminhao;
+import br.veiculos.Carro;
 import br.veiculos.IVeiculos;
+import br.veiculos.Van;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Entrega implements IPublicador {
     private String codEntrega;
-    private EstrategiaEntrega estrategiaEntrega;
+    private IEstrategiaEntrega estrategiaEntrega;
     private IVeiculos veiculo;
     private List<Rota> rotas;
     private IEstado estado = new EstadoValidacao();  
     private List<IObservador> observadores;
-    
 
-    public Entrega(String codEntrega, EstrategiaEntrega estrategiaEntrega, IVeiculos veiculo, Pedido pedido) {
+    public Entrega(String codEntrega, IEstrategiaEntrega estrategiaEntrega, Pedido pedido) {
         this.codEntrega = codEntrega;
         this.estrategiaEntrega = estrategiaEntrega;
-        this.veiculo = veiculo;
+        this.veiculo = escolherVeiculo(pedido.getPeso());
         this.rotas = new ArrayList<>();
         this.observadores = new ArrayList<>();
-        
     }
 
     @Override
@@ -67,29 +67,22 @@ public class Entrega implements IPublicador {
         }
     }
 
-    public double calcularDistanciaTotal() {
-        double distanciaTotal = 0;
-        for (Rota rota : rotas) {
-            distanciaTotal += rota.getDistancia();
+    private IVeiculos escolherVeiculo(double peso) {
+        if (peso <= 500) {
+            return new Carro();
+        } else if (peso > 500 && peso <= 2000) {
+            return new Van();
+        } else{
+            return new Caminhao();
         }
-        return distanciaTotal;
     }
 
-    public double calcularTempoTotal() {
-        double tempoTotal = 0;
-        for (Rota rota : rotas) {
-            tempoTotal += rota.getTempo();
-        }
-        return tempoTotal;
-    }
     
-    
-    public void mostrarInfoEntrega() {
+    public void mostrarInfoEntrega(Pedido pedido) {
         System.out.println("Código da Entrega: " + codEntrega);
         System.out.println("Veículo: " + veiculo.tipoVeiculo());
-        System.out.println("Estratégia de frete: " + estrategiaEntrega.calcularFrete());
-        System.out.println("Distância total: " + calcularDistanciaTotal() + " km");
-        System.out.println("Tempo total estimado: " + calcularTempoTotal() + " horas");
+        System.out.println("Capacidade de Carga:" + veiculo.capacidadeCarga());
+        System.out.println("Estratégia de frete: " + estrategiaEntrega.tipoEntrega());
         mostrarRotas();
     }
 

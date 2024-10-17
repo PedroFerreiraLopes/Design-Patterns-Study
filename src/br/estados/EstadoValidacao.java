@@ -12,5 +12,10 @@ public class EstadoValidacao implements IEstado {
     public void Aviso(String mensagem) {
         System.out.println("O pedido ainda está sendo confirmado, aguarde.");
     }
+    
+	@Override
+	public String NomeEstado() {
+		return "Em Validação";
+	}
 
 }

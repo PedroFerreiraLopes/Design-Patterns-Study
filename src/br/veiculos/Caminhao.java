@@ -1,15 +1,15 @@
 package br.veiculos;
 
-public class Moto implements IVeiculos {
+public class Caminhao implements IVeiculos {
 
 	@Override
 	public String tipoVeiculo() {
-		return "Moto";
+		return "Caminhao";
 	}
 
 	@Override
 	public double capacidadeCarga() {
-		return 400.0;
+		return 5000.0;
 	}
 
 	@Override

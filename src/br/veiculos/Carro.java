@@ -9,7 +9,7 @@ public class Carro implements IVeiculos {
 
     @Override
     public double capacidadeCarga() {
-        return 800.0;
+        return 500.0;
     }
 
     @Override

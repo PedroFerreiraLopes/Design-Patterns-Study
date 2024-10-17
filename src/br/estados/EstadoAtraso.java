@@ -12,4 +12,9 @@ public class EstadoAtraso implements IEstado {
     public void Aviso(String mensagem) {
         System.out.println("Produtos com atraso. Desculpe o incômodo");
     }
+
+	@Override
+	public String NomeEstado() {
+		return "Atrasada";
+	}
 }

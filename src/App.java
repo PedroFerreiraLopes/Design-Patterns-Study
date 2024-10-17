@@ -3,10 +3,9 @@ import br.entrega.EntregaNormal;
 import br.entrega.EntregaRapida;
 import br.entrega.Pedido;
 import br.estados.EstadoAtraso;
+import br.estados.EstadoEmArmazem;
 import br.observadores.Empresa;
 import br.observadores.Usuario;
-import br.veiculos.IVeiculos;
-import br.veiculos.Van;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -29,17 +28,34 @@ public class App {
     	//Empresa
     	Empresa empresa = new Empresa();
     	
-    	//Veículos
-    	IVeiculos veiculo1 = new Van();
     	
     	//Entregas
-    	Entrega entrega = new Entrega("1", new EntregaNormal(), veiculo1, pedido1);
-    	
-    	entrega.adicionarObservador(empresa);
-        entrega.adicionarObservador(usuario1);
-        
-        entrega.setEstado(new EstadoAtraso());
+    	Entrega entrega1 = new Entrega("1", new EntregaNormal(), pedido1);
+		entrega1.mostrarInfoEntrega(pedido1);
+		entrega1.mostrarRotas();
 
-        entrega.notificarObservadores();
+    	System.out.println("--------------------------------------------------------");
+
+		Entrega entrega2 = new Entrega("2", new EntregaRapida(), pedido2);
+		entrega2.mostrarInfoEntrega(pedido2);
+		entrega2.mostrarRotas();
+
+    	System.out.println("--------------------------------------------------------");
+    	
+    	//definir observers
+    	entrega1.adicionarObservador(empresa);
+        entrega1.adicionarObservador(usuario1);
+
+        entrega1.setEstado(new EstadoAtraso());
+        entrega1.notificarObservadores();
+        
+        System.out.println("--------------------------------------------------------");
+        
+    	entrega1.adicionarObservador(empresa);
+        entrega1.adicionarObservador(usuario2);
+        
+        entrega1.setEstado(new EstadoEmArmazem());
+        entrega1.notificarObservadores();
+        
     }
 }
