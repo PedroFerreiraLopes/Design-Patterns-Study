@@ -13,7 +13,7 @@ public class Usuario implements IObservador{
 
     @Override
     public void atualizar(IEstado estado) {
-        System.out.println("O usuário " + nickname + "foi notificado!");
+        System.out.println("O usuário " + nickname + " foi notificado!");
         System.out.println("Sua entrega está " + estado.NomeEstado());
     }
     
